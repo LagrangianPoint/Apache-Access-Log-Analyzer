@@ -45,6 +45,7 @@ def process_file(strFile, dictOutput):
 					dictUnit = {}
 					dictUnit["total"] = 1
 					dictUnit["ips"] = [ dictData['ip']  ]
+					dictOutput[strMethod][strStatus][strUrl] = dictUnit
 			else:
 				dictUnit = {}
 				dictUnit["total"] = 1
@@ -58,7 +59,6 @@ def process_file(strFile, dictOutput):
 			dictOutput[strMethod] = {}
 			dictOutput[strMethod][strStatus] = {}
 			dictOutput[strMethod][strStatus][strUrl] = dictUnit
-
 
 	return dictOutput
 
