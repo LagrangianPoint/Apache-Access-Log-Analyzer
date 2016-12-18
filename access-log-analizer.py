@@ -24,6 +24,7 @@ def extract_lines(strRaw):
 		listOut.append(dictTmp)
 	return listOut
 
+# Process a single Apache access log file and updates the dictOutput dictionary sent by reference. 
 def process_file(strFile, dictOutput):
 	fh = open(strFile, 'r')
 	strRaw = fh.read()
